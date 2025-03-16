@@ -1,0 +1,116 @@
+body {
+    line-height: 1.6;
+    color: black;
+    background-color: rgba(247, 239, 193, 0.616);
+}
+
+.center {
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+.image {
+    width: 700px;
+    height: 170px;
+}
+
+.textZenith {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 80px;
+    font-weight: serif;
+}
+
+.text1 {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 17px;
+    font-weight: Arial;
+}
+
+h2 {
+    text-align: left; /* Текст выравнивается по левому краю */
+    margin: 0 auto; /* Центрируем заголовок как блок */
+    width: fit-content; /* Ширина подстраивается под содержимое */
+    margin-top: 10px; /* Отступ сверху */
+    font-size: 24px; 
+}
+
+.icons {
+    display: flex; /* Выстраивает изображения в ряд */
+    justify-content: center;
+    gap: 40px; /* Отступы между картинками */
+}
+
+.item img {
+    width: 40px; /* Размер изображений */
+    height: auto; /* Сохранение пропорций */
+}
+
+.algorithm ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.algorithm ul li {
+    margin: 10px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрирование всего содержимого */
+    text-align: left; /* Оставляем текст у левого края */
+}
+
+.algorithm ul li::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 2px;
+    flex-shrink: 0; /* Предотвращаем сжатие квадрата */
+}
+
+.algorithm ul li:nth-child(1)::before {
+    background-color: lightgray;
+}
+
+.algorithm ul li:nth-child(2)::before {
+    background-color: brown;
+}
+
+.algorithm ul li:nth-child(3)::before {
+    background-color: gray;
+}
+
+.algorithm ul li:nth-child(4)::before {
+    background-color: orange;
+}
+
+footer {
+    background-color: #fbe9ae;
+    justify-content: center; /* Горизонтальное выравнивание */
+    align-items: center; /* Вертикальное выравнивание */
+    text-align: center;
+    width: 700px;
+    padding: 10px;
+    margin-top: 5px;
+    margin: 0 auto; /* Центрируем блок горизонтально */
+}
+
+.footer-description {
+    color: gray;
+    font-size: 0.9em;
+}

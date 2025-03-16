@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9; 
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "left main right"
+        "footer footer footer";
+    grid-template-columns: 250px 1fr 250px;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: #e687c8fb;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+aside.left {
+    grid-area: left;
+    background-color: #d9c044;
+    padding: 20px;
+}
+
+main {
+    grid-area: main;
+    padding: 20px;
+}
+
+aside.right {
+    grid-area: right;
+    background-color: rgb(139, 205, 141);
+    text-align: center;
+}
+
+.example {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.example div {
+    background-color: #ccc;
+    padding: 10px;
+    border: 1px solid #999;
+    text-align: center;
+}
+
+.flex-direction {
+    flex-direction: column; /*Элементы располагаются горизонтально */
+}
+
+.justify-content {
+    justify-content: center; /*Элементы располагаются горизонтально */
+}
+
+.flex-wrap-example {
+    flex-wrap: wrap; /*Элементы располагаются горизонтально */
+}
+
+.alight-items-example {
+    align-items: flex-start; /*Элементы выравниваются по верху контейнера*/
+    height: 150px;
+}
+
+@media (min-width: 1024px) {
+    body {
+        grid-template-columns: 250px 1fr 250px;
+    }
+
+    main {
+        grid-column: 2 / 3; /* Main занимает центральную колонку */
+    }
+    
+      aside.left {
+        grid-column: 1 / 2; /* Left в первой колонке */
+    }
+    
+      aside.right {
+        grid-column: 3 / 4; /* Right в третьей колонке */
+    }
+}
+
+/* Для планшетов */
+@media (max-width: 1023px) and (min-width: 768px) {
+    body {
+        grid-template-areas: 
+            "header header"
+            "main main"
+            "left right"
+            "footer footer";
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: auto 1fr auto auto; 
+    }
+    main {
+        grid-area: main;
+        grid-column: 1 / -1;
+    }
+    aside.left {
+        grid-area: left;
+        grid-column: 1; 
+        grid-row: 3; 
+    }
+    aside.right {
+        grid-area: right;
+        grid-column: 2; /* Правый блок во второй колонке */
+        grid-row: 3; /* Третья строка */
+    }
+}
+
+
+/* Для мобильных устройств */
+@media (max-width: 767px) {
+    body {
+        grid-template-areas:
+            "header"
+            "main"
+            "left"
+            "right"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    aside.left, aside.right {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+footer {
+    grid-area: footer;
+    background-color: #69b7eb;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+}
