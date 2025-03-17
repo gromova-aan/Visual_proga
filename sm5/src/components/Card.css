@@ -1,0 +1,15 @@
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    max-width: 300px;
+    background-color: rgb(197, 218, 255);
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.card strong {
+    font-weight: bold;
+}

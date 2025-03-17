@@ -1,0 +1,15 @@
+.App {
+  display: grid;
+  padding: 20px;
+}
+
+.search-sort-container {
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px;
+  gap: 20px;
+}
