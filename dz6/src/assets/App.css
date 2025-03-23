@@ -1,0 +1,41 @@
+.app {
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: background-color 0.5s ease;
+    color: white;
+    text-align: center;
+    font-family: inherit;
+}
+
+.clear-bg {
+    background: linear-gradient(to top, #56ccf2, #2f80ed); /* Синее небо */
+  }
+  
+.cloudy-bg {
+    background: linear-gradient(to top, #bdc3c7, #2c3e50); /* Серо-голубой */
+}
+  
+.rainy-bg {
+    background: linear-gradient(to top, #4b6cb7, #182848); /* Тёмный дождь */
+}
+  
+.title {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.city-name {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+  
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
