@@ -1,0 +1,43 @@
+.fruits-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .fruits-header {
+    background-color: #f4f4f4;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .fruits-header:hover {
+    background-color: #eaeaea;
+  }
+  
+  .arrow {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .arrow.open {
+    transform: rotate(180deg);
+  }
+  
+  .fruits-body {
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    padding: 0 10px;
+  }
+  
+  .fruits-body.open {
+    padding: 10px;
+  }
+  
+  .fruits-body.closed {
+    padding: 0;
+  }
