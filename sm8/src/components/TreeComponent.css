@@ -1,0 +1,33 @@
+.tree-container {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.tree-header {
+  background-color: #f4f4f4;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+
+.tree-header.has-children {
+  cursor: pointer;
+}
+
+.tree-header.has-children:hover {
+  background-color: #eaeaea;
+}
+
+.arrow {
+  font-size: 16px;
+  color: #333;
+}
+
+.tree-body {
+  padding: 10px;
+  margin-left: 20px;
+}
