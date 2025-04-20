@@ -14,3 +14,9 @@ npm start
 npm install react-router-dom formik yup
 
 ```
+
+```
+dotnet new webapi -n MyWebApi
+cd MyWebApi
+dotnet run
+```

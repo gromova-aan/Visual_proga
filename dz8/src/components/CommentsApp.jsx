@@ -37,7 +37,8 @@ const CommentsApp = () => {
 
 
     React.useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/comments")
+        // fetch("https://jsonplaceholder.typicode.com/comments")
+        fetch("http://localhost:5070/comments")
             .then((response) => response.json())
             .then((data) => setComments(data))
             .catch((error) => console.error("ошибка загрузки данных: ", error));
@@ -51,12 +52,14 @@ const CommentsApp = () => {
         const optimisticComment = {...newComment, id: newId};
         addOptimisticComments(optimisticComment);
         setComments((prev) => [optimisticComment, ...prev]);
+        console.log(optimisticComment);
 
         try {
-            const response = await fetch("https://jsonplaceholder.typicode.com/comments", {
+            // const response = await fetch("https://jsonplaceholder.typicode.com/comments", {
+            const response = await fetch("http://localhost:5070/comments", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({newComment}),
+                body: JSON.stringify(optimisticComment),
             });
 
             if (!response.ok) {
@@ -80,7 +83,8 @@ const CommentsApp = () => {
 
         try {
             for (const id of selectedIds) {
-                const response = await fetch(`https://jsonplaceholder.typicode.com/comments/${id}`, {
+                // const response = await fetch(`https://jsonplaceholder.typicode.com/comments/${id}`, {
+                const response = await fetch(`http://localhost:5070/comments/${id}`, {
                     method: "DELETE",
                 });
 
@@ -105,7 +109,8 @@ const CommentsApp = () => {
         addOptimisticComments(optimisticUpdate);
 
         try {
-            const response = await fetch(`https://jsonplaceholder.typicode.com/comments/${updatedComment.id}`, {
+            // const response = await fetch(`https://jsonplaceholder.typicode.com/comments/${updatedComment.id}`, {
+            const response = await fetch(`http://localhost:5070/comments/${updatedComment.id}`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(updatedComment),
