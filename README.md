@@ -7,9 +7,10 @@ npm install --save-dev jest
 ```
 npx create-react-app book-app
 cd book-app
+npm start
+```
 
 ```
-```
-npm start
+npm install react-router-dom formik yup
 
 ```
