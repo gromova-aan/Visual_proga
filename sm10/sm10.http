@@ -1,0 +1,6 @@
+@sm10_HostAddress = http://localhost:5187
+
+GET {{sm10_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

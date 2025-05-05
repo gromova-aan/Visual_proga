@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\sm10.props" />
+</Project>
